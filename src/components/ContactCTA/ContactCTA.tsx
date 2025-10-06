@@ -14,14 +14,14 @@ const ContactCTA = () => {
           style={{ backgroundColor: 'var(--muted)' }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--foreground)' }}>
-            想用 AI 提升效率或打造个人 IP?
+            想用 AI 稳定产出内容、跑通起号与增长？
           </h2>
           <p className="max-w-2xl mx-auto mb-8" style={{ color: 'var(--muted-foreground)' }}>
             无论你是个人创作者还是企业团队，我都能帮你用 AI 实现目标。
           </p>
           <div className="flex justify-center gap-4">
             <button className="btn btn-primary">
-              <Calendar className="mr-2 w-4 h-4" /> 预约免费咨询
+              <Calendar className="mr-2 w-4 h-4" /> 预约 AI 咨询
             </button>
             <button className="btn btn-secondary">
               <MessageCircle className="mr-2 w-4 h-4" /> 微信联系

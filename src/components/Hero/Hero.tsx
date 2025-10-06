@@ -17,40 +17,40 @@ const Hero = () => {
         {/* 中心对齐布局 */}
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           {/* 核心定位标题 */}
-          <motion.div 
+          <motion.div
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
-              资深技术经理 × AI 产品经理
+              用 AI，把你的学习力提速 10 倍
             </h1>
           </motion.div>
 
-          {/* Slogan */}
-          <motion.p 
-            className="text-lg md:text-xl font-medium max-w-3xl mx-auto"
+          {/* 副标题 */}
+          <motion.p
+            className="text-base md:text-lg max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             style={{ color: 'var(--muted-foreground)' }}
           >
-            让 AI 赋能生产力，让创作触达更多人。10 年技术与管理经验，专注 AI 应用落地、Agent 开发与自媒体内容运营，为个人与企业打造高效 AI 解决方案。
+            为忙碌的职场人与创作者打造的「AI 学习 × 咨询 × 陪跑」方案。
           </motion.p>
 
           {/* CTA 按钮 */}
-          <motion.div 
+          <motion.div
             className="flex justify-center gap-4 pt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <button className="btn btn-primary">
-              了解我的服务 <ArrowRight className="w-4 h-4" />
+              预约 AI 诊断 <ArrowRight className="w-4 h-4" />
             </button>
             <button className="btn btn-secondary">
-              <Download className="w-4 h-4" /> 免费学习指南
+              <Download className="w-4 h-4" /> 领取学习路线清单
             </button>
           </motion.div>
           

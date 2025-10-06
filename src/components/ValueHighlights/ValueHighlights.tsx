@@ -1,30 +1,30 @@
 import { motion } from 'framer-motion'
-import { Briefcase, Bot, Target, Zap } from 'lucide-react'
+import { Code2, Brain, MessageSquare, GraduationCap } from 'lucide-react'
 
 const ValueHighlights = () => {
   const highlights = [
     {
-      icon: <Briefcase className="w-8 h-8" />,
-      title: "技术与管理双背景",
-      description: "10 年 Java 后端与团队管理经验，熟悉互联网、物联网、餐饮支付领域",
+      icon: <Code2 className="w-8 h-8" />,
+      title: "AI编程SOP体系",
+      description: "深厚技术底蕴+完整AI编程方法论，精准用AI实现需求，让编程效率提升10倍",
       color: "from-blue-500 to-blue-600"
     },
     {
-      icon: <Bot className="w-8 h-8" />,
-      title: "AI 应用落地专家",
-      description: "擅长 AI Agent 搭建、提示词工程、RAG 方案设计",
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI应用全栈能力",
+      description: "从Agent开发到RAG系统，从提示词工程到AI产品设计，50+项目实战经验，懂技术更懂应用",
       color: "from-purple-500 to-purple-600"
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "产品与内容双驱动",
-      description: "既能做 AI 产品规划，也能用自媒体扩大影响",
+      icon: <MessageSquare className="w-8 h-8" />,
+      title: "提示词工程专家",
+      description: "精通Prompt设计与优化，帮助AI精准理解需求，让AI成为真正的生产力工具",
       color: "from-green-500 to-green-600"
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "高效交付能力",
-      description: "从想法到上线，最快 7 天完成 MVP 版本",
+      icon: <GraduationCap className="w-8 h-8" />,
+      title: "AI加速学习能力",
+      description: "利用AI快速掌握多领域知识，从技术到商业，持续迭代认知，保持竞争力",
       color: "from-orange-500 to-orange-600"
     }
   ]
@@ -40,10 +40,10 @@ const ValueHighlights = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-            核心优势
+            为什么选择我？
           </h2>
           <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-            多年技术积累与创新实践，为您提供专业可靠的 AI 解决方案
+            技术深度 × AI实战 × 学习力，全方位AI赋能专家
           </p>
         </motion.div>
 
@@ -86,20 +86,20 @@ const ValueHighlights = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-gradient">10+</div>
-              <div style={{ color: 'var(--muted-foreground)' }}>年技术经验</div>
+              <div className="text-3xl md:text-4xl font-bold text-gradient">10年+</div>
+              <div style={{ color: 'var(--muted-foreground)' }}>技术积累</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-gradient">25+</div>
-              <div style={{ color: 'var(--muted-foreground)' }}>团队管理规模</div>
+              <div className="text-3xl md:text-4xl font-bold text-gradient">2年+</div>
+              <div style={{ color: 'var(--muted-foreground)' }}>AI深耕</div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl md:text-4xl font-bold text-gradient">50+</div>
-              <div style={{ color: 'var(--muted-foreground)' }}>AI项目经验</div>
+              <div style={{ color: 'var(--muted-foreground)' }}>项目经验</div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl md:text-4xl font-bold text-gradient">10万+</div>
-              <div style={{ color: 'var(--muted-foreground)' }}>内容受众</div>
+              <div style={{ color: 'var(--muted-foreground)' }}>内容影响力</div>
             </div>
           </div>
         </motion.div>
