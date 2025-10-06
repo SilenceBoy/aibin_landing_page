@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Users, Briefcase, Wrench } from 'lucide-react'
-import heroProfile from '../../assets/hero-profile.png'
+import heroProfile from '../../assets/hero-profile2.jpg'
 
 const About = () => {
   return (

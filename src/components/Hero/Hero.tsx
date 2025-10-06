@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
-import heroProfile from '../../assets/hero-profile.png'
+import heroProfile from '../../assets/hero-profile.jpg'
 
 const Hero = () => {
   return (
