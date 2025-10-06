@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
+import heroProfile from '../../assets/hero-profile.png'
 
 const Hero = () => {
   return (
@@ -62,8 +63,8 @@ const Hero = () => {
           >
             <div className="relative w-48 h-48">
               <div className="w-full h-full rounded-full overflow-hidden" style={{ border: '1px solid var(--border)' }}>
-                <img 
-                  src="/src/assets/hero-profile.PNG" 
+                <img
+                  src={heroProfile}
                   alt="AI学习助手 - 专业可爱的猫咪形象"
                   className="w-full h-full object-cover"
                 />

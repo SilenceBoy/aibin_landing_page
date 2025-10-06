@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Users, Briefcase } from 'lucide-react'
+import heroProfile from '../../assets/hero-profile.png'
 
 const About = () => {
   return (
@@ -13,9 +14,9 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img 
-              src="/src/assets/hero-profile.PNG" 
-              alt="Bin 哥专业形象照" 
+            <img
+              src={heroProfile}
+              alt="Bin 哥专业形象照"
               className="rounded-lg object-cover w-full h-full"
             />
           </motion.div>
