@@ -4,7 +4,10 @@ import heroProfile from '../../assets/hero-profile.jpg'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: 'var(--background)' }}>
+    <section
+      className="relative min-h-screen flex items-start pt-32 md:pt-44 pb-16 overflow-hidden"
+      style={{ backgroundColor: 'var(--background)' }}
+    >
       {/* 简约装饰元素 */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-2 h-2 rounded-full animate-float" style={{ backgroundColor: 'var(--accent)', opacity: 0.6 }}></div>
@@ -56,7 +59,7 @@ const Hero = () => {
           
           {/* 头像区域 */}
           <motion.div 
-            className="flex justify-center mt-16 md:mt-24"
+            className="flex justify-center mt-12 md:mt-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
