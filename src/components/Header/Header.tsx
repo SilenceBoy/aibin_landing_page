@@ -8,7 +8,8 @@ const Header = () => {
   const navigationItems = [
     { href: '#services', label: '核心服务' },
     { href: '#about', label: '关于我' },
-    { href: '#content', label: '精选内容' }
+    { href: '#content', label: '精选内容' },
+    { href: 'https://news.silencebin.com', label: '新闻', external: true }
   ]
 
   return (
@@ -40,6 +41,8 @@ const Header = () => {
               href={item.href}
               className="hover:text-gray-900 transition-colors"
               style={{ color: 'var(--foreground)' }}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
               whileHover={{ y: -2 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,6 +92,8 @@ const Header = () => {
                 className="py-2 transition-colors"
                 style={{ color: 'var(--foreground)' }}
                 onClick={() => setIsMenuOpen(false)}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
