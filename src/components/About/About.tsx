@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion'
-import { Users, Briefcase, Wrench } from 'lucide-react'
-import heroProfile from '../../assets/hero-profile2.jpg'
 
 const About = () => {
   return (
@@ -15,12 +13,12 @@ const About = () => {
             viewport={{ once: true }}
           >
             <img
-              src={heroProfile}
-              alt="Bin 哥专业形象照"
+              src="/src/assets/hero-profile2.png"
+              alt="梁斌 - AI应用顾问"
               className="rounded-lg object-cover w-3/4 mx-auto max-w-sm"
             />
           </motion.div>
-          
+
           {/* 右侧内容 */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -28,27 +26,47 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--foreground)' }}>
-              关于 Bin
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--foreground)' }}>
+              关于我
             </h2>
-            <p className="mb-4" style={{ color: 'var(--muted-foreground)' }}>
-              资深技术经理 × AI 产品经理，专注 <strong>AI 学习力</strong> 与 <strong>自媒体起号</strong> 的实战落地。把复杂的工具与方法，拆成可执行的日/周任务。
-            </p>
-            <p className="mb-6" style={{ color: 'var(--muted-foreground)' }}>
-              长期以"<strong>陪跑者</strong>"角色，帮助职场人与创作者在 <strong>7–30 天</strong> 内建立稳定的内容生产线与数据复盘机制。
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center" style={{ color: 'var(--foreground)' }}>
-                <Briefcase className="w-5 h-5 mr-3 icon-accent" />
-                10+ 年互联网与团队管理经验
-              </div>
-              <div className="flex items-center" style={{ color: 'var(--foreground)' }}>
-                <Wrench className="w-5 h-5 mr-3 icon-accent" />
-                AI 工具链与工作流搭建（Notion/脚本/模板/SOP）
-              </div>
-              <div className="flex items-center" style={{ color: 'var(--foreground)' }}>
-                <Users className="w-5 h-5 mr-3 icon-accent" />
-                小红书/图文/口播脚本体系与数据化复盘
+
+            <div className="space-y-4 text-base leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
+              <p>
+                我是<strong style={{ color: 'var(--foreground)' }}>梁斌</strong>，AI 应用顾问 / AI 产品项目负责人。
+              </p>
+              <p>
+                过去在<strong style={{ color: 'var(--foreground)' }}>核心交易系统、政企复杂集成与平台化产品</strong>上做过大规模交付。
+              </p>
+              <p>
+                现在专注<strong style={{ color: 'var(--foreground)' }}>企业 AI 落地</strong>：RAG 企业知识库、Agent 流程自动化、AIGC 内容生产。
+              </p>
+              <p>
+                我的风格是：<strong style={{ color: 'var(--accent)' }}>指标先行、验收驱动、可控上线、可复用沉淀</strong>。
+              </p>
+              <p>
+                如果你需要把 AI 从 Demo 推进到业务结果，我们可以<a href="#contact" className="underline" style={{ color: 'var(--accent)' }}>聊 15 分钟</a>。
+              </p>
+            </div>
+
+            {/* 当前机会 */}
+            <div className="mt-8 p-4 rounded-lg" style={{ backgroundColor: 'var(--muted)' }}>
+              <p className="text-sm mb-2" style={{ color: 'var(--muted-foreground)' }}>
+                我现在在看这些机会：
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['AI解决方案负责人', 'AI产品负责人', 'AI落地负责人（ToB）'].map((role, index) => (
+                  <span
+                    key={index}
+                    className="text-sm px-3 py-1 rounded-full"
+                    style={{
+                      backgroundColor: 'var(--background)',
+                      color: 'var(--foreground)',
+                      border: '1px solid var(--border)'
+                    }}
+                  >
+                    {role}
+                  </span>
+                ))}
               </div>
             </div>
           </motion.div>

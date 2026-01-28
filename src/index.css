@@ -77,7 +77,8 @@
   }
   
   .btn-primary:hover {
-    background-color: oklch(from var(--primary) l-0.05 h c);
+    background-color: oklch(0.3 0.03 240);
+    color: var(--primary-foreground);
     transform: translateY(-1px);
   }
   
@@ -89,7 +90,7 @@
   }
   
   .btn-secondary:hover {
-    background-color: oklch(from var(--secondary) l-0.02 h c);
+    background-color: oklch(0.92 0.02 240);
   }
   
   /* 卡片组件 */
