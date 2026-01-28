@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import heroProfile from '../../assets/hero-profile2.png'
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <img
-              src="/src/assets/hero-profile2.png"
+              src={heroProfile}
               alt="梁斌 - AI应用顾问"
               className="rounded-lg object-cover w-3/4 mx-auto max-w-sm"
             />
