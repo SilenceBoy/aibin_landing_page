@@ -1,45 +1,44 @@
 import { motion } from 'framer-motion'
-import { TrendingUp, Layers, DollarSign, Brain } from 'lucide-react'
+import { Brain, Code2, Megaphone, ImageIcon } from 'lucide-react'
 
 const HardProof = () => {
     const proofs = [
         {
-            icon: <TrendingUp className="w-8 h-8" />,
-            title: "规模与稳定性",
-            metrics: [
-                { value: "1400w", label: "日订单" },
-                { value: "5亿", label: "日GTV" },
-                { value: "25w", label: "活跃商户" }
-            ],
-            description: "核心交易系统"
-        },
-        {
-            icon: <Layers className="w-8 h-8" />,
-            title: "复杂协同与交付",
-            metrics: [
-                { value: "17", label: "异构系统集成" },
-                { value: "4000w", label: "项目营收" }
-            ],
-            description: "政企复杂交付"
-        },
-        {
-            icon: <DollarSign className="w-8 h-8" />,
-            title: "平台化与商业化",
-            metrics: [
-                { value: "80w", label: "研发成本" },
-                { value: "270w", label: "创收" }
-            ],
-            description: "IoT 平台"
-        },
-        {
             icon: <Brain className="w-8 h-8" />,
-            title: "AI 原生工作方式",
+            title: "AI 思维与提效赋能",
             metrics: [
-                { value: "5000h", label: "深度使用" },
-                { value: "1000+", label: "提示词模板" },
-                { value: "30+", label: "业务场景智能体" }
+                { value: "5000h", label: "持续研究" },
+                { value: "Notion", label: "知识库" },
+                { value: "课程", label: "线下输出" }
             ],
-            description: "Claude/GPT/Gemini"
+            description: "帮助个人与团队建立真正可用的 AI 学习与提效体系"
+        },
+        {
+            icon: <Code2 className="w-8 h-8" />,
+            title: "AI 全栈开发与工作流落地",
+            metrics: [
+                { value: "全链路", label: "开发落地" },
+                { value: "网站", label: "独立上线" }
+            ],
+            description: "把想法快速变成可运行的产品、工具和工作流"
+        },
+        {
+            icon: <Megaphone className="w-8 h-8" />,
+            title: "AI 赋能内容增长与个人品牌运营",
+            metrics: [
+                { value: "近1w", label: "全网粉丝" },
+                { value: "双平台", label: "持续输出" }
+            ],
+            description: "形成了适用于个人品牌起号、内容生产和经验输出的 AI 辅助 SOP"
+        },
+        {
+            icon: <ImageIcon className="w-8 h-8" />,
+            title: "AI 多模态创作与商业表达",
+            metrics: [
+                { value: "写真", label: "方法与审美" },
+                { value: "广告", label: "商业表达" }
+            ],
+            description: "将 AI 生图、生视频等多模态能力用于内容视觉与商业场景"
         }
     ]
 
@@ -54,10 +53,10 @@ const HardProof = () => {
                     className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                        代表性成果
+                        四大能力模块
                     </h2>
                     <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                        硬钉子：做成过什么
+                        围绕 AI 思维、开发、增长与多模态表达形成可复用能力
                     </p>
                 </motion.div>
 
@@ -69,7 +68,7 @@ const HardProof = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="card text-center p-6"
+                            className="card text-center p-6 h-full flex flex-col"
                         >
                             {/* 图标 */}
                             <div className="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--muted)' }}>
@@ -77,12 +76,14 @@ const HardProof = () => {
                             </div>
 
                             {/* 标题 */}
-                            <h3 className="text-base font-semibold mb-3" style={{ color: 'var(--card-foreground)' }}>
-                                {proof.title}
-                            </h3>
+                            <div className="min-h-[3rem] mb-3 flex items-center justify-center">
+                                <h3 className="text-base font-semibold leading-6" style={{ color: 'var(--card-foreground)' }}>
+                                    {proof.title}
+                                </h3>
+                            </div>
 
                             {/* 指标 */}
-                            <div className="flex flex-wrap justify-center gap-3 mb-3">
+                            <div className="flex flex-wrap justify-center gap-3 mb-3 min-h-[4.5rem] content-start">
                                 {proof.metrics.map((metric, mIndex) => (
                                     <div key={mIndex} className="text-center">
                                         <div className="text-xl md:text-2xl font-bold text-gradient">{metric.value}</div>
@@ -92,7 +93,7 @@ const HardProof = () => {
                             </div>
 
                             {/* 描述 */}
-                            <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
+                            <p className="text-xs leading-6 mt-auto" style={{ color: 'var(--muted-foreground)' }}>
                                 {proof.description}
                             </p>
                         </motion.div>

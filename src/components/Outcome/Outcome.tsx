@@ -1,27 +1,31 @@
 import { motion } from 'framer-motion'
-import { Database, Workflow, FileText, Rocket } from 'lucide-react'
+import { Compass, FolderKanban, ScanSearch, Sparkles } from 'lucide-react'
 
 const Outcome = () => {
     const outcomes = [
         {
-            icon: <Database className="w-8 h-8" />,
-            result: "把内部知识库变成'可问、可追溯、可评估'的智能问答",
-            tag: "RAG"
+            icon: <Compass className="w-8 h-8" />,
+            result: "帮你建立 AI 学习路径、使用边界和高效协作方式。",
+            tag: "学习路径",
+            title: "不会学 AI，不知道从哪开始"
         },
         {
-            icon: <Workflow className="w-8 h-8" />,
-            result: "把重复流程变成'可执行链路'的自动化工作流",
-            tag: "Agent"
+            icon: <FolderKanban className="w-8 h-8" />,
+            result: "帮你把想法变成产品、工具、流程或可执行方案。",
+            tag: "项目落地",
+            title: "想做 AI 项目，但落不了地"
         },
         {
-            icon: <FileText className="w-8 h-8" />,
-            result: "把内容/素材产出做成'稳定流水线'",
-            tag: "AIGC"
+            icon: <ScanSearch className="w-8 h-8" />,
+            result: "帮你搭建可复用的提示词结构、工作流与协作方式。",
+            tag: "提效协作",
+            title: "想用 AI 提效，但总觉得不稳定"
         },
         {
-            icon: <Rocket className="w-8 h-8" />,
-            result: "把探索变成'可推进的项目'：有 PoC、有验收、有迭代路径",
-            tag: "交付"
+            icon: <Sparkles className="w-8 h-8" />,
+            result: "帮你把 AI 用到内容运营、多模态创作和个人品牌增长中。",
+            tag: "内容表达",
+            title: "想用 AI 做内容或视觉表达"
         }
     ]
 
@@ -36,10 +40,10 @@ const Outcome = () => {
                     className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                        我能帮你做成什么
+                        我能帮你把 AI 用到真实场景里
                     </h2>
                     <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                        用结果说话，而不是能力清单
+                        把抽象能力翻译成真实问题，帮助访问者快速代入
                     </p>
                 </motion.div>
 
@@ -69,8 +73,11 @@ const Outcome = () => {
                                 <div className="icon-accent">{item.icon}</div>
                             </div>
 
-                            {/* 结果 */}
-                            <p className="text-sm leading-relaxed" style={{ color: 'var(--card-foreground)' }}>
+                            <h3 className="text-base font-semibold mb-3" style={{ color: 'var(--card-foreground)' }}>
+                                {item.title}
+                            </h3>
+
+                            <p className="text-sm leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
                                 {item.result}
                             </p>
                         </motion.div>

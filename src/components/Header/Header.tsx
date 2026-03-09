@@ -6,10 +6,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigationItems = [
-    { href: '#outcome', label: '成果' },
-    { href: '#proof', label: '背书' },
-    { href: '#ways', label: '合作方式' },
-    { href: '#process', label: '流程' }
+    { href: '#outcome', label: '问题场景' },
+    { href: '#proof', label: '能力模块' },
+    { href: '#cases', label: '成果作品' },
+    { href: '#ways', label: '合作方式' }
   ]
 
   return (

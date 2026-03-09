@@ -1,31 +1,31 @@
 import { motion } from 'framer-motion'
-import { MessageSquare, Handshake, ClipboardCheck, RefreshCw } from 'lucide-react'
+import { BookOpen, Building2, PencilLine, Rocket } from 'lucide-react'
 
 const Process = () => {
     const steps = [
         {
-            icon: <MessageSquare className="w-6 h-6" />,
+            icon: <BookOpen className="w-6 h-6" />,
             step: "01",
-            title: "15 分钟对齐目标",
-            description: "你说现状和目标，我给初步判断与切入点"
+            title: "个人学习者",
+            description: "想系统学习 AI，但不知道怎么开始，也不知道如何真正用起来"
         },
         {
-            icon: <Handshake className="w-6 h-6" />,
+            icon: <PencilLine className="w-6 h-6" />,
             step: "02",
-            title: "确定合作方式",
-            description: "评审 / PoC / 共建"
+            title: "创作者 / 个体经营者",
+            description: "想用 AI 做内容、提效率、打造个人品牌或做视觉表达"
         },
         {
-            icon: <ClipboardCheck className="w-6 h-6" />,
+            icon: <Rocket className="w-6 h-6" />,
             step: "03",
-            title: "明确验收标准",
-            description: "可交付物、时间节点、风险与边界"
+            title: "创业者 / 小团队",
+            description: "想借助 AI 快速验证产品、搭建 workflow、做项目推进"
         },
         {
-            icon: <RefreshCw className="w-6 h-6" />,
+            icon: <Building2 className="w-6 h-6" />,
             step: "04",
-            title: "推进与复盘",
-            description: "每周复盘迭代，沉淀模板与资产"
+            title: "企业团队",
+            description: "想做 AI 培训、AI 提效、AI 项目落地或长期共建"
         }
     ]
 
@@ -40,17 +40,14 @@ const Process = () => {
                     className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                        合作流程
+                        这些场景下，我可能能帮到你
                     </h2>
                     <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                        怎么开始、怎么推进、怎么验收
+                        把适合合作的人群直接说清楚，方便访问者快速判断
                     </p>
                 </motion.div>
 
                 <div className="relative">
-                    {/* 连接线 - 桌面端 */}
-                    <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5" style={{ backgroundColor: 'var(--border)' }}></div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {steps.map((item, index) => (
                             <motion.div
@@ -62,7 +59,6 @@ const Process = () => {
                                 className="relative"
                             >
                                 <div className="card p-6 text-center h-full">
-                                    {/* 步骤编号 */}
                                     <div
                                         className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center text-lg font-bold relative z-10"
                                         style={{
@@ -73,17 +69,14 @@ const Process = () => {
                                         {item.step}
                                     </div>
 
-                                    {/* 图标 */}
                                     <div className="w-10 h-10 mx-auto mb-3 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--muted)' }}>
                                         <div className="icon-accent">{item.icon}</div>
                                     </div>
 
-                                    {/* 标题 */}
                                     <h3 className="text-base font-semibold mb-2" style={{ color: 'var(--card-foreground)' }}>
                                         {item.title}
                                     </h3>
 
-                                    {/* 描述 */}
                                     <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
                                         {item.description}
                                     </p>

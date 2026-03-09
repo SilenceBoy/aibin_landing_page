@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Users } from 'lucide-react'
 import heroProfile from '../../assets/hero-profile2.jpg'
+import { heroConfig } from '../../content/homeContent.js'
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: 'var(--background)' }}>
-      {/* 简约装饰元素 */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-2 h-2 rounded-full animate-float" style={{ backgroundColor: 'var(--accent)', opacity: 0.6 }}></div>
         <div className="absolute top-40 right-20 w-3 h-3 rounded-full animate-float" style={{ backgroundColor: 'var(--accent)', opacity: 0.4, animationDelay: '1s' }}></div>
@@ -14,9 +14,7 @@ const Hero = () => {
       </div>
 
       <div className="container-custom relative z-10">
-        {/* 中心对齐布局 */}
-        <div className="text-center space-y-8 max-w-4xl mx-auto">
-          {/* 核心定位标题 */}
+        <div className="text-center space-y-8 max-w-5xl mx-auto">
           <motion.div
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
@@ -24,14 +22,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-4 leading-tight">
-              <span className="block">AI 应用探索者</span>
-              <span className="block text-2xl md:text-3xl lg:text-4xl mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                把 AI 共生变成可复用的能力与结果
-              </span>
+              <span className="block">{heroConfig.title}</span>
             </h1>
           </motion.div>
 
-          {/* 副标题 */}
           <motion.div
             className="space-y-3"
             initial={{ opacity: 0, y: 20 }}
@@ -39,41 +33,33 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p
-              className="text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
-              style={{ color: 'var(--muted-foreground)' }}
+              className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed font-medium"
+              style={{ color: 'oklch(0.42 0.02 240)' }}
             >
-              5000 小时研究如何与 AI 共生，只为两类事：
+              {heroConfig.subtitle}
             </p>
             <p
               className="text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
               style={{ color: 'var(--muted-foreground)' }}
             >
-              把 AI 落成可交付的系统/流程，也把个人成长与转型的方法论做成可复制的路径。
-            </p>
-            <p
-              className="text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
-              style={{ color: 'var(--muted-foreground)' }}
-            >
-              如果你希望把 AI 从"工具热闹"推进到"真实结果"，我们可以合作。
+              {heroConfig.description}
             </p>
           </motion.div>
 
-          {/* CTA 按钮 */}
           <motion.div
             className="flex flex-col sm:flex-row justify-center gap-4 pt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href="https://wj.qq.com/s2/25653939/5109/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              预约 15 分钟沟通 <ArrowRight className="w-4 h-4" />
+            <a href={heroConfig.primaryButtonLink} className="btn btn-primary">
+              {heroConfig.primaryButtonText} <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#ways" className="btn btn-secondary">
-              <Users className="w-4 h-4" /> 看合作方式
+            <a href={heroConfig.secondaryButtonLink} className="btn btn-secondary">
+              <Users className="w-4 h-4" /> {heroConfig.secondaryButtonText}
             </a>
           </motion.div>
 
-          {/* 头像区域 */}
           <motion.div
             className="flex justify-center mt-16 md:mt-24"
             initial={{ opacity: 0, y: 20 }}
@@ -84,29 +70,16 @@ const Hero = () => {
               <div className="w-full h-full rounded-full overflow-hidden" style={{ border: '1px solid var(--border)' }}>
                 <img
                   src={heroProfile}
-                  alt="梁斌 - AI 共生探索者"
+                  alt="梁斌 - AI 应用实践者"
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* 装饰点 */}
               <div className="absolute -top-2 -left-2 w-10 h-10 rounded-full animate-pulse" style={{ backgroundColor: 'var(--accent)', opacity: 0.7 }}></div>
               <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full animate-pulse" style={{ backgroundColor: 'var(--accent)', opacity: 0.5, animationDelay: '1s' }}></div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* 底部滚动指示器 */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-      >
-        <div className="w-6 h-10 border-2 rounded-full flex justify-center" style={{ borderColor: 'var(--border)' }}>
-          <div className="w-1 h-3 rounded-full mt-2 animate-bounce" style={{ backgroundColor: 'var(--muted-foreground)' }}></div>
-        </div>
-      </motion.div>
     </section>
   )
 }
