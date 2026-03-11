@@ -1,8 +1,14 @@
-import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowRight, X } from 'lucide-react'
 import { portfolioConfig } from '../../content/homeContent.js'
 
+import wxgzhImg from '../../assets/wxgzh.JPG'
+import xhsImg from '../../assets/xhs.JPG'
+
 const CaseHighlights = () => {
+    const [selectedModal, setSelectedModal] = useState<{ title: string; imgSrc: string; hint?: string } | null>(null);
+
     const cases = portfolioConfig.categories.map((category) => {
         const primaryItem = category.items[0]
 
@@ -75,17 +81,82 @@ const CaseHighlights = () => {
                                 {caseItem.description}
                             </p>
 
-                            <a
-                                href={caseItem.buttonLink}
-                                target={caseItem.buttonLink.startsWith('http') ? '_blank' : undefined}
-                                rel={caseItem.buttonLink.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                className="btn btn-secondary mt-5 whitespace-nowrap"
-                            >
-                                {caseItem.buttonText} <ArrowRight className="w-4 h-4 ml-1" />
-                            </a>
+                            {caseItem.title === '内容与影响力' ? (
+                                <button
+                                    onClick={() => setSelectedModal({ title: caseItem.title, imgSrc: wxgzhImg, hint: '微信扫码' })}
+                                    className="btn btn-secondary mt-5 whitespace-nowrap inline-flex items-center justify-center w-fit"
+                                >
+                                    {caseItem.buttonText} <ArrowRight className="w-4 h-4 ml-1" />
+                                </button>
+                            ) : caseItem.title === '多模态案例' ? (
+                                <button
+                                    onClick={() => setSelectedModal({ title: caseItem.title, imgSrc: xhsImg })}
+                                    className="btn btn-secondary mt-5 whitespace-nowrap inline-flex items-center justify-center w-fit"
+                                >
+                                    {caseItem.buttonText} <ArrowRight className="w-4 h-4 ml-1" />
+                                </button>
+                            ) : (
+                                <a
+                                    href={caseItem.buttonLink}
+                                    target={caseItem.buttonLink?.startsWith('http') ? '_blank' : undefined}
+                                    rel={caseItem.buttonLink?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                    className="btn btn-secondary mt-5 whitespace-nowrap inline-flex items-center justify-center w-fit"
+                                >
+                                    {caseItem.buttonText} <ArrowRight className="w-4 h-4 ml-1" />
+                                </a>
+                            )}
                         </motion.div>
                     ))}
                 </div>
+
+                {/* 弹窗 */}
+                <AnimatePresence>
+                    {selectedModal && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+                            onClick={() => setSelectedModal(null)}
+                        >
+                            <motion.div
+                                initial={{ scale: 0.95, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.95, opacity: 0 }}
+                                onClick={(e) => e.stopPropagation()}
+                                className={`relative w-full rounded-2xl overflow-hidden p-6 text-center shadow-2xl ${
+                                    selectedModal.title === '多模态案例' ? 'max-w-sm' : 'max-w-md'
+                                }`}
+                                style={{ backgroundColor: 'var(--card)', color: 'var(--card-foreground)' }}
+                            >
+                                <button
+                                    onClick={() => setSelectedModal(null)}
+                                    className="absolute right-4 top-4 p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+                                    aria-label="关闭弹窗"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                                
+                                <h3 className="text-xl font-bold mb-4">{selectedModal.title}</h3>
+                                
+                                <div className="flex justify-center mb-4">
+                                    <img 
+                                        src={selectedModal.imgSrc} 
+                                        alt={selectedModal.title} 
+                                        className={`${selectedModal.title === '多模态案例' ? 'max-h-[50vh]' : 'max-h-[60vh]'} object-contain rounded-lg border shadow-sm`}
+                                        style={{ borderColor: 'var(--border)' }}
+                                    />
+                                </div>
+                                
+                                {selectedModal.hint && (
+                                    <p className="text-sm font-medium" style={{ color: 'var(--muted-foreground)' }}>
+                                        {selectedModal.hint}
+                                    </p>
+                                )}
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </section>
     )
