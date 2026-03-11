@@ -3,7 +3,7 @@ import { Calendar, Mail } from 'lucide-react'
 
 const ContactCTA = () => {
   return (
-    <section className="section" id="contact" style={{ backgroundColor: 'var(--muted)' }}>
+    <section className="section" id="contact" style={{ backgroundColor: 'var(--background)' }}>
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -11,7 +11,7 @@ const ContactCTA = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="card text-center p-8 md:p-12"
-          style={{ backgroundColor: 'var(--background)' }}
+          style={{ backgroundColor: 'var(--muted)' }}
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: 'var(--foreground)' }}>
             如果你想把 AI 真正用起来，欢迎联系我

@@ -30,7 +30,7 @@ const Process = () => {
     ]
 
     return (
-        <section className="section" id="process" style={{ backgroundColor: 'var(--background)' }}>
+        <section className="section" id="process" style={{ backgroundColor: 'var(--muted)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
