@@ -1,17 +1,18 @@
 export const siteMeta = {
-  name: '梁斌',
+  name: 'Bin哥',
   tagline: '把 AI 变成学习力、生产力和实际结果',
   bookingLink: 'https://wj.qq.com/s2/25653939/5109/',
 }
 
 export const notionLinks = {
-  aiMindset: 'https://silencebin.notion.site/',
+  aiMindset: 'https://ai-map.silencebin.com',
   promptCourse: '',
   xhsCourse: '',
   aiPhotoProject: 'https://ai-photo.silencebin.com',
   newsWeekly: 'https://news.silencebin.com',
+  github: 'https://github.com/SilenceBoy',
   toolsAndWorkflow: '',
-  contentPortfolio: 'https://silencebin.notion.site/',
+  contentPortfolio: 'https://ai-map.silencebin.com',
   visualPortfolio: 'https://ai-photo.silencebin.com',
   consulting: '',
   projectCooperation: '',
@@ -163,12 +164,12 @@ export const portfolioConfig = {
       buttonLink: notionLinks.aiPhotoProject || notionLinks.newsWeekly || '#contact',
       items: [
         {
-          title: 'AI 写真网站',
+          title: 'AI 写真创作网站',
           shortDescription: '借助 AI 与全栈开发能力独立完成的网站项目，覆盖前端、后端、数据库、运维与运营。',
           proofText: '它证明了：我可以把 AI 用于从想法到上线的完整闭环。',
           tags: ['全栈', 'AI 应用', '产品化'],
           buttonText: '联系查看详情',
-          buttonLink: 'https://ai-photo.silencebin.com',
+          buttonLink: notionLinks.aiPhotoProject,
         },
         {
           title: 'AI 新闻周报网站',
@@ -176,7 +177,7 @@ export const portfolioConfig = {
           proofText: '它证明了：我不仅能做工具，也能把长期内容运营做成系统。',
           tags: ['网站', '内容系统', '持续运营'],
           buttonText: '访问网站',
-          buttonLink: 'https://news.silencebin.com',
+          buttonLink: notionLinks.newsWeekly,
         },
       ],
     },
@@ -186,7 +187,7 @@ export const portfolioConfig = {
       buttonLink: notionLinks.aiMindset || '#contact',
       items: [
         {
-          title: 'Notion AI 知识库',
+          title: '个人 AI 知识站点',
           shortDescription: '持续沉淀 AI 思维、工具实践、案例拆解和工作方法。',
           proofText: '它证明了：我不是零散试用，而是在构建可复用的认知资产。',
           tags: ['知识库', '方法论', '持续沉淀'],
@@ -204,12 +205,12 @@ export const portfolioConfig = {
       ],
     },
     {
-      title: '内容与影响力',
+      title: '内容运营与影响力',
       buttonText: '查看案例',
       buttonLink: notionLinks.contentPortfolio || '#contact',
       items: [
         {
-          title: '小红书与公众号内容输出',
+          title: '公众号内容输出',
           shortDescription: '围绕 AI 洞察、实战经验和多模态表达持续创作，形成内容矩阵。',
           proofText: '它证明了：我能把复杂实践转成公众可理解、可传播的内容。',
           tags: ['内容增长', '个人品牌', '传播'],
@@ -232,7 +233,7 @@ export const portfolioConfig = {
       buttonLink: notionLinks.visualPortfolio || '#contact',
       items: [
         {
-          title: 'AI 写真案例',
+          title: 'AI 多模态案例',
           shortDescription: '聚焦人物写真方向，兼顾风格控制、审美统一和结果交付。',
           proofText: '它证明了：我可以把 AI 视觉结果做成具有商业表达力的内容。',
           tags: ['写真', '审美', '可交付'],
@@ -346,7 +347,7 @@ export const contactConfig = {
       type: 'website',
       label: 'AI 新闻周报',
       value: 'news.silencebin.com',
-      href: 'https://news.silencebin.com',
+      href: notionLinks.newsWeekly,
     },
   ],
 }

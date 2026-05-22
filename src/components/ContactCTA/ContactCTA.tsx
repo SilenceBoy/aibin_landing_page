@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { Calendar, Mail } from 'lucide-react'
+import { siteMeta } from '../../content/homeContent'
 
-const ContactCTA = () => {
+const ContactCTA = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs') => void }) => {
   return (
     <section className="section" id="contact" style={{ backgroundColor: 'var(--background)' }}>
       <div className="container-custom">
@@ -24,30 +25,27 @@ const ContactCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <a href="https://wj.qq.com/s2/25653939/5109/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href={siteMeta.bookingLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               <Calendar className="mr-2 w-4 h-4" /> 预约 15 分钟沟通
             </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm" style={{ color: 'var(--muted-foreground)' }}>
-            <a href="mailto:silence52168@gmail.com" className="flex items-center gap-2 hover:underline">
-              <Mail className="w-4 h-4" /> silence52168@gmail.com
-            </a>
-            <span className="flex items-center gap-2">
-              微信: silence52168
-            </span>
-            <a href="https://ai-photo.silencebin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              AI 写真网站
-            </a>
-            <a href="https://silencebin.notion.site/" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              AI 知识库
-            </a>
-            <a href="https://github.com/SilenceBoy" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              GitHub
-            </a>
-            <a href="https://news.silencebin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              AI 新闻周报
-            </a>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm">
+            <span className="text-xs uppercase tracking-wider font-semibold opacity-60" style={{ color: 'var(--foreground)' }}>联系方式</span>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a href="mailto:silence52168@gmail.com" className="flex items-center gap-2 hover:underline" style={{ color: 'var(--foreground)' }}>
+                <Mail className="w-4 h-4" /> silence52168@gmail.com
+              </a>
+              <span className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
+                微信: <button onClick={() => onOpenModal('wechat')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>silence52168</button>
+              </span>
+              <span className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
+                公众号: <button onClick={() => onOpenModal('gzh')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>Bin哥AI跃迁手记</button>
+              </span>
+              <span className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
+                小红书: <button onClick={() => onOpenModal('xhs')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>Bin哥的AI跃迁</button>
+              </span>
+            </div>
           </div>
         </motion.div>
       </div>

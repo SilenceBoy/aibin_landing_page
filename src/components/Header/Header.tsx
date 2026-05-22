@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Menu, X, Calendar } from 'lucide-react'
 import { useState } from 'react'
+import { siteMeta } from '../../content/homeContent'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,7 +33,7 @@ const Header = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          梁斌
+          Bin哥
         </motion.a>
 
         {/* Desktop Navigation */}
@@ -52,7 +53,7 @@ const Header = () => {
             </motion.a>
           ))}
           <motion.a
-            href="https://wj.qq.com/s2/25653939/5109/"
+            href={siteMeta.bookingLink}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
@@ -103,11 +104,11 @@ const Header = () => {
               </motion.a>
             ))}
             <motion.a
-              href="https://wj.qq.com/s2/25653939/5109/"
+              href={siteMeta.bookingLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary w-fit"
               onClick={() => setIsMenuOpen(false)}
+              className="btn btn-primary w-fit"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.4 }}

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { Calendar, Mail } from 'lucide-react'
+import { notionLinks, siteMeta } from '../../content/homeContent'
 
-const Footer = () => {
+const Footer = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs') => void }) => {
   return (
     <footer className="section" style={{ backgroundColor: 'var(--background)', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom">
@@ -19,13 +20,13 @@ const Footer = () => {
             如果你希望把 AI 从理解推进到真实结果，我们可以聊 15 分钟
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wj.qq.com/s2/25653939/5109/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href={siteMeta.bookingLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               <Calendar className="mr-2 w-4 h-4" /> 预约 15 分钟沟通
             </a>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 pt-8" style={{ borderTop: '1px solid var(--border)' }}>
+        <div className="grid md:grid-cols-4 gap-8 pt-8" style={{ borderTop: '1px solid var(--border)' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +34,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-              梁斌
+              Bin哥
             </h3>
             <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
               把 AI 变成学习力、生产力和实际结果。
@@ -74,19 +75,38 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
-                微信: silence52168
+                微信: <button onClick={() => onOpenModal('wechat')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>silence52168</button>
+              </li>
+              <li className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
+                公众号: <button onClick={() => onOpenModal('gzh')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>Bin哥AI跃迁手记</button>
+              </li>
+              <li className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
+                小红书: <button onClick={() => onOpenModal('xhs')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>Bin哥的AI跃迁</button>
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="font-semibold mb-3" style={{ color: 'var(--foreground)' }}>
+              我的站点
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href={notionLinks.aiPhotoProject} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 写真创作站点</a>
               </li>
               <li>
-                <a href="https://ai-photo.silencebin.com" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 写真网站</a>
+                <a href={notionLinks.aiMindset} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 知识站点</a>
               </li>
               <li>
-                <a href="https://silencebin.notion.site/" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 知识库</a>
+                <a href={notionLinks.github} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>GitHub 站点</a>
               </li>
               <li>
-                <a href="https://github.com/SilenceBoy" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>GitHub</a>
-              </li>
-              <li>
-                <a href="https://news.silencebin.com" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 新闻周报</a>
+                <a href={notionLinks.newsWeekly} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 新闻周报站点</a>
               </li>
             </ul>
           </motion.div>
@@ -97,7 +117,7 @@ const Footer = () => {
             color: 'var(--muted-foreground)',
             borderTop: '1px solid var(--border)'
           }}>
-          © 2026 梁斌. 保留所有权利。
+          © 2026 Bin哥. 保留所有权利。
         </div>
       </div>
     </footer>

@@ -15,7 +15,7 @@ const About = () => {
           >
             <img
               src={heroProfile}
-              alt="梁斌 - AI应用顾问"
+              alt="Bin哥 - AI应用顾问"
               className="rounded-lg object-cover w-3/4 mx-auto max-w-sm"
             />
           </motion.div>
@@ -33,7 +33,7 @@ const About = () => {
 
             <div className="space-y-4 text-base leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
               <p>
-                我是<strong style={{ color: 'var(--foreground)' }}>梁斌</strong>，AI 应用顾问 / AI 产品项目负责人。
+                我是<strong style={{ color: 'var(--foreground)' }}>Bin哥</strong>，AI 应用顾问 / AI 产品项目负责人。
               </p>
               <p>
                 过去在<strong style={{ color: 'var(--foreground)' }}>核心交易系统、政企复杂集成与平台化产品</strong>上做过大规模交付。

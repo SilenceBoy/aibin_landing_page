@@ -81,7 +81,7 @@ const CaseHighlights = () => {
                                 {caseItem.description}
                             </p>
 
-                            {caseItem.title === '内容与影响力' ? (
+                            {caseItem.title === '内容运营与影响力' ? (
                                 <button
                                     onClick={() => setSelectedModal({ title: caseItem.title, imgSrc: wxgzhImg, hint: '微信扫码' })}
                                     className="btn btn-secondary mt-5 whitespace-nowrap inline-flex items-center justify-center w-fit"
@@ -124,9 +124,8 @@ const CaseHighlights = () => {
                                 animate={{ scale: 1, opacity: 1 }}
                                 exit={{ scale: 0.95, opacity: 0 }}
                                 onClick={(e) => e.stopPropagation()}
-                                className={`relative w-full rounded-2xl overflow-hidden p-6 text-center shadow-2xl ${
-                                    selectedModal.title === '多模态案例' ? 'max-w-sm' : 'max-w-md'
-                                }`}
+                                className={`relative w-full rounded-2xl overflow-hidden p-6 text-center shadow-2xl ${selectedModal.title === '多模态案例' ? 'max-w-sm' : 'max-w-md'
+                                    }`}
                                 style={{ backgroundColor: 'var(--card)', color: 'var(--card-foreground)' }}
                             >
                                 <button
@@ -136,18 +135,18 @@ const CaseHighlights = () => {
                                 >
                                     <X className="w-5 h-5" />
                                 </button>
-                                
+
                                 <h3 className="text-xl font-bold mb-4">{selectedModal.title}</h3>
-                                
+
                                 <div className="flex justify-center mb-4">
-                                    <img 
-                                        src={selectedModal.imgSrc} 
-                                        alt={selectedModal.title} 
+                                    <img
+                                        src={selectedModal.imgSrc}
+                                        alt={selectedModal.title}
                                         className={`${selectedModal.title === '多模态案例' ? 'max-h-[50vh]' : 'max-h-[60vh]'} object-contain rounded-lg border shadow-sm`}
                                         style={{ borderColor: 'var(--border)' }}
                                     />
                                 </div>
-                                
+
                                 {selectedModal.hint && (
                                     <p className="text-sm font-medium" style={{ color: 'var(--muted-foreground)' }}>
                                         {selectedModal.hint}

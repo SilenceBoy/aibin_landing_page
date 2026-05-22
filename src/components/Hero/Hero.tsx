@@ -70,7 +70,7 @@ const Hero = () => {
               <div className="w-full h-full rounded-full overflow-hidden" style={{ border: '1px solid var(--border)' }}>
                 <img
                   src={heroProfile}
-                  alt="梁斌 - AI 应用实践者"
+                  alt="Bin哥 - AI 应用实践者"
                   className="w-full h-full object-cover"
                 />
               </div>
