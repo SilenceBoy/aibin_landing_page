@@ -35,7 +35,7 @@ const ProjectMetrics = () => {
             icon: <Brain className="w-8 h-8" />,
             title: 'AI 原生工作方式',
             values: [
-                { value: '5000h', label: '深度使用' },
+                { value: '6000+ 小时', label: '深度使用' },
                 { value: '1000+', label: '提示词模板' },
                 { value: '30+', label: '业务场景智能体' },
             ],

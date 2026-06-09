@@ -37,13 +37,13 @@ export const heroConfig = {
   secondaryButtonText: '联系合作',
   secondaryButtonLink: '#contact',
   highlights: [
-    '5000 小时 AI 共生实践',
+    '6000+ 小时 AI 共生实践',
     '方法论 + 项目 + 内容三线并进',
     '聚焦真实场景，而非停留在工具演示',
   ],
   stats: [
-    { label: '持续实践', value: '5000h' },
-    { label: '内容影响力', value: '近 1w' },
+    { label: '持续实践', value: '6000+ 小时' },
+    { label: '内容影响力', value: '1w+' },
     { label: '典型方向', value: '4 类' },
   ],
 }
@@ -92,7 +92,7 @@ export const capabilityConfig = {
       icon: 'brain',
       title: 'AI 思维与提效赋能',
       description:
-        '5000 小时持续研究 AI 共生与应用实践，关注 AI 的能力边界、使用边界和协作方式，帮助个人与团队建立真正可用的 AI 学习与提效体系。',
+        '6000+ 小时持续研究 AI 共生与应用实践，关注 AI 的能力边界、使用边界和协作方式，帮助个人与团队建立真正可用的 AI 学习与提效体系。',
       bulletPoints: [
         '系统研究 AI 如何进入学习、工作与业务场景',
         '理解 AI 在提效、知识管理与认知升级中的价值',
@@ -129,7 +129,7 @@ export const capabilityConfig = {
         '用 AI 学会并实践自媒体运营',
         '总结 AI 辅助起号 SOP',
         '输出 AI 洞察、AI 经验分享与 AI 写真成果',
-        '全网接近一万粉丝',
+        '全网 1w+ 粉丝',
         '主要活跃在小红书和微信公众号',
       ],
       metric: '增长 / 内容 / 影响力',

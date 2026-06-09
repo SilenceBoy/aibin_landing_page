@@ -66,7 +66,7 @@ const Hero = () => {
               <div className="grid gap-4 text-sm">
                 <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 mt-1 icon-accent" />
-                  <span>5000 小时 AI 共生实践</span>
+                  <span>6000+ 小时 AI 共生实践</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <BriefcaseBusiness className="w-4 h-4 mt-1 icon-accent" />
