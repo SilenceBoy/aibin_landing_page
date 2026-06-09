@@ -30,25 +30,28 @@ const Process = () => {
     ]
 
     return (
-        <section className="section" id="process" style={{ backgroundColor: 'var(--muted)' }}>
+        <section className="section section-rule" id="process" style={{ backgroundColor: 'var(--background)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-center mb-12"
+                    className="grid gap-4 md:grid-cols-[0.42fr_1fr] md:items-end mb-10"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                        这些场景下，我可能能帮到你
-                    </h2>
-                    <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                        把适合合作的人群直接说清楚，方便访问者快速判断
+                    <div>
+                        <p className="eyebrow mb-3">Audience</p>
+                        <h2 className="font-display text-3xl md:text-5xl font-semibold" style={{ color: 'var(--foreground)' }}>
+                            这些场景下，我可能能帮到你
+                        </h2>
+                    </div>
+                    <p className="max-w-2xl leading-8 md:justify-self-end" style={{ color: 'var(--muted-foreground)' }}>
+                        把适合合作的人群直接说清楚，方便访问者快速判断。
                     </p>
                 </motion.div>
 
                 <div className="relative">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                         {steps.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -56,28 +59,22 @@ const Process = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="relative"
+                                className="relative border-t p-6"
+                                style={{ borderColor: 'var(--border)' }}
                             >
-                                <div className="card p-6 text-center h-full">
-                                    <div
-                                        className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center text-lg font-bold relative z-10"
-                                        style={{
-                                            backgroundColor: 'var(--accent)',
-                                            color: 'var(--accent-foreground)'
-                                        }}
-                                    >
+                                <div className="h-full">
+                                    <div className="mb-8 flex items-center justify-between">
+                                        <span className="font-display text-3xl" style={{ color: 'var(--accent)' }}>
                                         {item.step}
-                                    </div>
-
-                                    <div className="w-10 h-10 mx-auto mb-3 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--muted)' }}>
+                                        </span>
                                         <div className="icon-accent">{item.icon}</div>
                                     </div>
 
-                                    <h3 className="text-base font-semibold mb-2" style={{ color: 'var(--card-foreground)' }}>
+                                    <h3 className="text-base font-semibold mb-3" style={{ color: 'var(--card-foreground)' }}>
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
+                                    <p className="text-sm leading-7" style={{ color: 'var(--muted-foreground)' }}>
                                         {item.description}
                                     </p>
                                 </div>

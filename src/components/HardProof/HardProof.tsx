@@ -43,24 +43,27 @@ const HardProof = () => {
     ]
 
     return (
-        <section className="section" id="proof" style={{ backgroundColor: 'var(--muted)' }}>
+        <section className="section section-rule" id="proof" style={{ backgroundColor: 'var(--muted)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-center mb-12"
+                    className="grid gap-4 md:grid-cols-[0.42fr_1fr] md:items-end mb-10"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                        四大能力模块
-                    </h2>
-                    <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                        围绕 AI 思维、开发、增长与多模态表达形成可复用能力
+                    <div>
+                        <p className="eyebrow mb-3">Capabilities</p>
+                        <h2 className="font-display text-3xl md:text-5xl font-semibold" style={{ color: 'var(--foreground)' }}>
+                            四大能力模块
+                        </h2>
+                    </div>
+                    <p className="max-w-2xl leading-8 md:justify-self-end" style={{ color: 'var(--muted-foreground)' }}>
+                        围绕 AI 思维、开发、增长与多模态表达形成可复用能力。
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2">
                     {proofs.map((proof, index) => (
                         <motion.div
                             key={index}
@@ -68,32 +71,30 @@ const HardProof = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="card text-center p-6 h-full flex flex-col"
+                            className="border-t p-6 md:p-8"
+                            style={{ borderColor: 'var(--border)' }}
                         >
-                            {/* 图标 */}
-                            <div className="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--muted)' }}>
+                            <div className="flex items-start justify-between gap-5">
+                                <span className="font-display text-4xl" style={{ color: 'var(--accent)' }}>
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
                                 <div className="icon-accent">{proof.icon}</div>
                             </div>
 
-                            {/* 标题 */}
-                            <div className="min-h-[3rem] mb-3 flex items-center justify-center">
-                                <h3 className="text-base font-semibold leading-6" style={{ color: 'var(--card-foreground)' }}>
-                                    {proof.title}
-                                </h3>
-                            </div>
+                            <h3 className="mt-8 text-xl font-semibold leading-8" style={{ color: 'var(--card-foreground)' }}>
+                                {proof.title}
+                            </h3>
 
-                            {/* 指标 */}
-                            <div className="flex flex-wrap justify-center gap-3 mb-3 min-h-[4.5rem] content-start">
+                            <div className="mt-5 grid grid-cols-2 gap-4">
                                 {proof.metrics.map((metric, mIndex) => (
-                                    <div key={mIndex} className="text-center">
-                                        <div className="text-xl md:text-2xl font-bold text-gradient">{metric.value}</div>
+                                    <div key={mIndex}>
+                                        <div className="font-display text-2xl" style={{ color: 'var(--accent)' }}>{metric.value}</div>
                                         <div className="text-xs" style={{ color: 'var(--muted-foreground)' }}>{metric.label}</div>
                                     </div>
                                 ))}
                             </div>
 
-                            {/* 描述 */}
-                            <p className="text-xs leading-6 mt-auto" style={{ color: 'var(--muted-foreground)' }}>
+                            <p className="mt-6 text-sm leading-7" style={{ color: 'var(--muted-foreground)' }}>
                                 {proof.description}
                             </p>
                         </motion.div>

@@ -15,20 +15,21 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 md:p-6"
+      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-5 py-4 md:px-8"
       style={{
-        backgroundColor: 'var(--background)',
+        backgroundColor: 'color-mix(in oklch, var(--background) 88%, transparent)',
+        backdropFilter: 'blur(18px)',
         borderBottom: '1px solid var(--border)'
       }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-6xl mx-auto w-full flex justify-between items-center">
+      <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
         {/* Logo */}
         <motion.a
           href="/"
-          className="text-2xl font-bold"
+          className="font-display text-2xl font-semibold"
           style={{ color: 'var(--foreground)' }}
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -37,13 +38,13 @@ const Header = () => {
         </motion.a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-7 text-sm">
           {navigationItems.map((item, index) => (
             <motion.a
               key={item.href}
               href={item.href}
-              className="hover:text-gray-900 transition-colors"
-              style={{ color: 'var(--foreground)' }}
+              className="transition-colors"
+              style={{ color: 'var(--muted-foreground)' }}
               whileHover={{ y: -2 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -56,7 +57,7 @@ const Header = () => {
             href={siteMeta.bookingLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn btn-primary py-3"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -68,7 +69,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="md:hidden p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           style={{ color: 'var(--foreground)' }}
         >
@@ -88,7 +89,7 @@ const Header = () => {
           animate={{ opacity: 1, height: 'auto' }}
           transition={{ duration: 0.3 }}
         >
-          <div className="max-w-6xl mx-auto px-4 flex flex-col space-y-4">
+          <div className="max-w-7xl mx-auto px-5 flex flex-col space-y-4">
             {navigationItems.map((item, index) => (
               <motion.a
                 key={item.href}

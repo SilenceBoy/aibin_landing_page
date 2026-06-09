@@ -44,24 +44,27 @@ const ProjectMetrics = () => {
     ]
 
     return (
-        <section className="section" id="project-metrics" style={{ backgroundColor: 'var(--muted)' }}>
+        <section className="section section-rule" id="project-metrics" style={{ backgroundColor: 'var(--background)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-center mb-12"
+                    className="grid gap-4 md:grid-cols-[0.42fr_1fr] md:items-end mb-10"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                        硬指标项目经验
-                    </h2>
-                    <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                        这些数字对应的是规模、交付、商业化和 AI 原生工作方式
+                    <div>
+                        <p className="eyebrow mb-3">Project Proof</p>
+                        <h2 className="font-display text-3xl md:text-5xl font-semibold" style={{ color: 'var(--foreground)' }}>
+                            硬指标项目经验
+                        </h2>
+                    </div>
+                    <p className="max-w-2xl leading-8 md:justify-self-end" style={{ color: 'var(--muted-foreground)' }}>
+                        这些数字对应的是规模、交付、商业化和 AI 原生工作方式。
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 xl:grid-cols-4">
                     {metrics.map((item, index) => (
                         <motion.div
                             key={item.title}
@@ -69,25 +72,26 @@ const ProjectMetrics = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="card text-center p-6 h-full flex flex-col"
+                            className="soft-panel p-6 h-full flex flex-col md:border-l-0"
+                            style={{ borderRadius: 0 }}
                         >
                             <div
-                                className="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center"
-                                style={{ backgroundColor: 'var(--background)' }}
+                                className="mb-8 flex items-center justify-between"
                             >
+                                <span className="font-display text-3xl" style={{ color: 'var(--accent)' }}>
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
                                 <div className="icon-accent">{item.icon}</div>
                             </div>
 
-                            <div className="min-h-[3rem] mb-4 flex items-center justify-center">
-                                <h3 className="text-base font-semibold" style={{ color: 'var(--card-foreground)' }}>
-                                    {item.title}
-                                </h3>
-                            </div>
+                            <h3 className="text-lg font-semibold leading-7" style={{ color: 'var(--card-foreground)' }}>
+                                {item.title}
+                            </h3>
 
-                            <div className="flex flex-wrap justify-center gap-3 mb-4 min-h-[5.75rem] content-start">
+                            <div className="mt-6 grid grid-cols-2 gap-4">
                                 {item.values.map((metric) => (
-                                    <div key={metric.label} className="text-center min-w-[4.5rem]">
-                                        <div className="text-xl md:text-2xl font-bold text-gradient">{metric.value}</div>
+                                    <div key={metric.label}>
+                                        <div className="font-display text-2xl" style={{ color: 'var(--accent)' }}>{metric.value}</div>
                                         <div className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
                                             {metric.label}
                                         </div>
@@ -95,7 +99,7 @@ const ProjectMetrics = () => {
                                 ))}
                             </div>
 
-                            <p className="text-xs mt-auto" style={{ color: 'var(--muted-foreground)' }}>
+                            <p className="text-xs mt-8 pt-5 border-t" style={{ color: 'var(--muted-foreground)', borderColor: 'var(--border)' }}>
                                 {item.description}
                             </p>
                         </motion.div>

@@ -30,24 +30,27 @@ const Outcome = () => {
     ]
 
     return (
-        <section className="section" id="outcome" style={{ backgroundColor: 'var(--background)' }}>
+        <section className="section section-rule" id="outcome" style={{ backgroundColor: 'var(--background)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-center mb-12"
+                    className="grid gap-4 md:grid-cols-[0.42fr_1fr] md:items-end mb-10"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                        我能帮你把 AI 用到真实场景里
-                    </h2>
-                    <p className="mt-2" style={{ color: 'var(--muted-foreground)' }}>
-                        把抽象能力翻译成真实问题，帮助访问者快速代入
+                    <div>
+                        <p className="eyebrow mb-3">Problems</p>
+                        <h2 className="font-display text-3xl md:text-5xl font-semibold" style={{ color: 'var(--foreground)' }}>
+                            我能帮你把 AI 用到真实场景里
+                        </h2>
+                    </div>
+                    <p className="max-w-2xl leading-8 md:justify-self-end" style={{ color: 'var(--muted-foreground)' }}>
+                        把抽象能力翻译成真实问题，帮助访问者快速代入。
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid border-y" style={{ borderColor: 'var(--border)' }}>
                     {outcomes.map((item, index) => (
                         <motion.div
                             key={index}
@@ -55,29 +58,22 @@ const Outcome = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="card p-6 text-center"
+                            className="grid gap-5 py-6 md:grid-cols-[5rem_1fr_2fr] md:items-center"
+                            style={{ borderTop: index === 0 ? '0' : '1px solid var(--border)' }}
                         >
-                            {/* 标签 */}
-                            <span
-                                className="inline-block text-xs px-3 py-1 rounded-full mb-4"
-                                style={{
-                                    backgroundColor: 'var(--accent)',
-                                    color: 'var(--accent-foreground)'
-                                }}
-                            >
-                                {item.tag}
-                            </span>
-
-                            {/* 图标 */}
-                            <div className="w-12 h-12 mx-auto mb-4 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--muted)' }}>
+                            <div className="flex items-center gap-4">
+                                <span className="font-display text-3xl" style={{ color: 'var(--accent)' }}>
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
                                 <div className="icon-accent">{item.icon}</div>
                             </div>
-
-                            <h3 className="text-base font-semibold mb-3" style={{ color: 'var(--card-foreground)' }}>
-                                {item.title}
-                            </h3>
-
-                            <p className="text-sm leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
+                            <div>
+                                <span className="text-xs" style={{ color: 'var(--accent)' }}>{item.tag}</span>
+                                <h3 className="text-lg font-semibold mt-1" style={{ color: 'var(--card-foreground)' }}>
+                                    {item.title}
+                                </h3>
+                            </div>
+                            <p className="text-sm leading-7" style={{ color: 'var(--muted-foreground)' }}>
                                 {item.result}
                             </p>
                         </motion.div>

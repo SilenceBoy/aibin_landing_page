@@ -4,22 +4,25 @@ import { notionLinks, siteMeta } from '../../content/homeContent'
 
 const Footer = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs') => void }) => {
   return (
-    <footer className="section" style={{ backgroundColor: 'var(--background)', borderTop: '1px solid var(--border)' }}>
+    <footer className="section" style={{ backgroundColor: 'var(--muted)', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-12 grid gap-6 md:grid-cols-[1fr_auto] md:items-end"
         >
-          <h3 className="text-2xl font-bold mb-4" style={{ color: 'var(--foreground)' }}>
-            准备好了吗？
-          </h3>
-          <p className="mb-6" style={{ color: 'var(--muted-foreground)' }}>
-            如果你希望把 AI 从理解推进到真实结果，我们可以聊 15 分钟
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div>
+            <p className="eyebrow mb-3">Next Step</p>
+            <h3 className="font-display text-3xl md:text-5xl font-semibold mb-4" style={{ color: 'var(--foreground)' }}>
+              准备好了吗？
+            </h3>
+            <p className="leading-8" style={{ color: 'var(--muted-foreground)' }}>
+              如果你希望把 AI 从理解推进到真实结果，我们可以聊 15 分钟。
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
             <a href={siteMeta.bookingLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               <Calendar className="mr-2 w-4 h-4" /> 预约 15 分钟沟通
             </a>
@@ -33,7 +36,7 @@ const Footer = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs')
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-bold mb-2" style={{ color: 'var(--foreground)' }}>
+            <h3 className="font-display text-2xl font-semibold mb-2" style={{ color: 'var(--foreground)' }}>
               Bin哥
             </h3>
             <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
