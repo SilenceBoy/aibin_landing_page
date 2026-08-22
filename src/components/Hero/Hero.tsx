@@ -60,13 +60,16 @@ const Hero = () => {
             <div className="hero-visual-note">
               <div className="eyebrow mb-3">Professional Profile</div>
               <p className="font-display text-2xl mb-2">Bin哥</p>
+              <p className="text-sm font-semibold leading-6 mb-3 break-words" style={{ color: 'var(--accent)' }}>
+                前阿里巴巴本地生活技术经理
+              </p>
               <p className="text-sm leading-7 mb-5 break-words" style={{ color: 'var(--muted-foreground)' }}>
                 以工程背景、AI 原生工作方式和内容表达能力，把抽象 AI 能力转成可交付的方案。
               </p>
               <div className="grid gap-4 text-sm">
                 <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 mt-1 icon-accent" />
-                  <span>6000+ 小时 AI 共生实践</span>
+                  <span>7000+ 小时 AI 共生实践</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <BriefcaseBusiness className="w-4 h-4 mt-1 icon-accent" />

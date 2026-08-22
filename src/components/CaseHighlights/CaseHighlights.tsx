@@ -29,7 +29,7 @@ const CaseHighlights = () => {
     })
 
     return (
-        <section className="section section-rule" id="cases" style={{ backgroundColor: 'var(--background)' }}>
+        <section className="section section-rule" id="cases" style={{ backgroundColor: 'var(--muted)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

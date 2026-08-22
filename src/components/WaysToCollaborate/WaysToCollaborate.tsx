@@ -27,7 +27,7 @@ const WaysToCollaborate = () => {
     ]
 
     return (
-        <section className="section section-rule" id="ways" style={{ backgroundColor: 'var(--muted)' }}>
+        <section className="section section-rule" id="ways" style={{ backgroundColor: 'var(--background)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

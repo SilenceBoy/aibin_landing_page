@@ -7,7 +7,7 @@ const HardProof = () => {
             icon: <Brain className="w-8 h-8" />,
             title: "AI 思维与提效赋能",
             metrics: [
-                { value: "6000+ 小时", label: "持续研究" },
+                { value: "7000+ 小时", label: "持续研究" },
                 { value: "Notion", label: "知识库" },
                 { value: "课程", label: "线下输出" }
             ],
@@ -26,7 +26,7 @@ const HardProof = () => {
             icon: <Megaphone className="w-8 h-8" />,
             title: "AI 赋能内容增长与个人品牌运营",
             metrics: [
-                { value: "1w+", label: "全网粉丝" },
+                { value: "万粉", label: "自媒体博主" },
                 { value: "双平台", label: "持续输出" }
             ],
             description: "形成了适用于个人品牌起号、内容生产和经验输出的 AI 辅助 SOP"
@@ -43,7 +43,7 @@ const HardProof = () => {
     ]
 
     return (
-        <section className="section section-rule" id="proof" style={{ backgroundColor: 'var(--muted)' }}>
+        <section className="section section-rule" id="proof" style={{ backgroundColor: 'var(--background)' }}>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
