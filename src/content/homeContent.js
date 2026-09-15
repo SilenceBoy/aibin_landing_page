@@ -9,6 +9,7 @@ export const notionLinks = {
   promptCourse: '',
   xhsCourse: '',
   aiPhotoProject: 'https://ai-photo.silencebin.com',
+  aiVisionProject: 'https://ai-vision.silencebin.com',
   newsWeekly: 'https://news.silencebin.com',
   github: 'https://github.com/SilenceBoy',
   toolsAndWorkflow: '',
@@ -161,15 +162,15 @@ export const portfolioConfig = {
     {
       title: '产品 / 网站',
       buttonText: '查看案例',
-      buttonLink: notionLinks.aiPhotoProject || notionLinks.newsWeekly || '#contact',
+      buttonLink: notionLinks.aiVisionProject || notionLinks.newsWeekly || '#contact',
       items: [
         {
-          title: 'AI 写真创作网站',
+          title: 'Bin哥AI光影时空',
           shortDescription: '借助 AI 与全栈开发能力独立完成的网站项目，覆盖前端、后端、数据库、运维与运营。',
           proofText: '它证明了：我可以把 AI 用于从想法到上线的完整闭环。',
           tags: ['全栈', 'AI 应用', '产品化'],
           buttonText: '联系查看详情',
-          buttonLink: notionLinks.aiPhotoProject,
+          buttonLink: notionLinks.aiVisionProject,
         },
         {
           title: 'AI 新闻周报网站',

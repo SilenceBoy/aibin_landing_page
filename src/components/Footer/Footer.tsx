@@ -103,6 +103,9 @@ const Footer = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs')
                 <a href={notionLinks.aiPhotoProject} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 写真创作站点</a>
               </li>
               <li>
+                <a href={notionLinks.aiVisionProject} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 光影创作站点</a>
+              </li>
+              <li>
                 <a href={notionLinks.aiMindset} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 知识站点</a>
               </li>
               <li>
