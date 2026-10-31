@@ -1,7 +1,7 @@
 # 项目状态看板
 
-最后更新：2026-09-16 03:17（Asia/Shanghai）
-当前项目阶段：内容维护（dev 已推送；生产发布待决定）
+最后更新：2026-10-31（Asia/Shanghai）
+当前项目阶段：内容维护（个人介绍更新完成，执行 main 合并）
 当前负责人：Claude Code
 项目总阻塞：无
 
@@ -9,6 +9,7 @@
 
 | 任务 | 负责人 | 状态 | 进度 | 最近更新 | 下一步 |
 |---|---|---|---:|---|---|
+| [TASK-20261031-profile-update](tasks/TASK-20261031-profile-update.md) 个人介绍与经历数据更新 | Codex | 已完成 | 100% | 2026-10-31 | 合并 main 并同步远程；线上部署待确认 |
 | [TASK-20260916-case-link-ai-vision](tasks/TASK-20260916-case-link-ai-vision.md) 「产品 / 网站」案例链接改为 ai-vision（含副标题、页脚、JSON-LD） | Claude Code | 已完成 | 100% | 2026-09-16 03:17 | 待决定是否合并 main 发布生产 |
 
 ## 最近验证
@@ -24,7 +25,7 @@
 
 ## 阻塞与待决定
 
-- 是否将 dev 快进合并到 main 并推送，触发 Production 部署（待用户决定）。
+- 无。2026-10-31 用户已授权完成修改后合并 main。
 
 ## 本次工作记录
 
@@ -33,3 +34,5 @@
 - 2026-09-16 02:06 Claude Code：按用户确认追加副标题、页脚、JSON-LD 修改，转进行中。
 - 2026-09-16 02:09 Claude Code：副标题、页脚、JSON-LD 修改完成，测试 / lint / 构建 / 浏览器断言通过，转待验证。
 - 2026-09-16 03:17 Claude Code：确认用户已提交推送 `c12a7b8`、Preview 部署成功，人工验收通过，转已完成；记录更新提交推送 origin/dev。
+
+- 2026-10-31 Codex：TASK-20261031-profile-update 已基于 origin/dev 4984f8c 完成；修改文件 ESLint、npm run build、git diff --check HEAD 均通过。未运行全仓测试，未做浏览器视觉验收。用户已授权合并 main。

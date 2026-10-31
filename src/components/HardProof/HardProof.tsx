@@ -7,20 +7,20 @@ const HardProof = () => {
             icon: <Brain className="w-8 h-8" />,
             title: "AI 思维与提效赋能",
             metrics: [
-                { value: "7000+ 小时", label: "持续研究" },
+                { value: "8000+ 小时", label: "持续研究" },
                 { value: "Notion", label: "知识库" },
                 { value: "课程", label: "线下输出" }
             ],
-            description: "帮助个人与团队建立真正可用的 AI 学习与提效体系"
+            description: "帮助个人与团队建立 AI 学习与提效体系，设计并落地 AI Agent、企业知识库与智能工作流，让 AI 能力融入实际业务。"
         },
         {
             icon: <Code2 className="w-8 h-8" />,
-            title: "AI 全栈开发与工作流落地",
+            title: "AI 协作开发与工作流落地",
             metrics: [
                 { value: "全链路", label: "开发落地" },
                 { value: "网站", label: "独立上线" }
             ],
-            description: "把想法快速变成可运行的产品、工具和工作流"
+            description: "将工程化思维与 AI 协作开发相结合，从需求分析、产品设计到研发交付，把想法快速变成产品。"
         },
         {
             icon: <Megaphone className="w-8 h-8" />,

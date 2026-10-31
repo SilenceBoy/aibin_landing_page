@@ -15,7 +15,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="eyebrow">AI Application Practitioner</div>
+            <div className="eyebrow">AI Solutions Consultant</div>
             <h1 className="font-display max-w-[11ch] sm:max-w-none text-3xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-semibold leading-[1.18] break-all sm:break-normal">
               {heroConfig.title}
             </h1>
@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="hero-profile-orb">
               <img
                 src={heroProfile}
-                alt="Bin哥 - AI 应用实践者"
+                alt="Bin哥 - AI应用落地与解决方案顾问"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -64,20 +64,20 @@ const Hero = () => {
                 前阿里巴巴本地生活技术经理
               </p>
               <p className="text-sm leading-7 mb-5 break-words" style={{ color: 'var(--muted-foreground)' }}>
-                以工程背景、AI 原生工作方式和内容表达能力，把抽象 AI 能力转成可交付的方案。
+                从需求分析、方案设计到场景实施，为个人与团队提供定制化 AI 应用解决方案。
               </p>
               <div className="grid gap-4 text-sm">
                 <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 mt-1 icon-accent" />
-                  <span>7000+ 小时 AI 共生实践</span>
+                  <span>8000+ 小时 AI 深度研究与实践</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <BriefcaseBusiness className="w-4 h-4 mt-1 icon-accent" />
-                  <span>方法论、项目、内容三线并进</span>
+                  <span>AI Agent、企业知识库与智能工作流</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Sparkles className="w-4 h-4 mt-1 icon-accent" />
-                  <span>多模态审美服务于商业表达</span>
+                  <span>AI 多模态生成与商业表达</span>
                 </div>
               </div>
             </div>
