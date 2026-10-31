@@ -1,7 +1,7 @@
 # 项目状态看板
 
 最后更新：2026-10-31（Asia/Shanghai）
-当前项目阶段：内容维护（个人介绍更新完成，执行 main 合并）
+当前项目阶段：内容维护（下线站点与微信入口移除已验收）
 当前负责人：Claude Code
 项目总阻塞：无
 
@@ -36,3 +36,11 @@
 - 2026-09-16 03:17 Claude Code：确认用户已提交推送 `c12a7b8`、Preview 部署成功，人工验收通过，转已完成；记录更新提交推送 origin/dev。
 
 - 2026-10-31 Codex：TASK-20261031-profile-update 已基于 origin/dev 4984f8c 完成；修改文件 ESLint、npm run build、git diff --check HEAD 均通过。未运行全仓测试，未做浏览器视觉验收。用户已授权合并 main。
+
+## 2026-10-31 下线入口修正
+
+- [TASK-20261031-retire-photo-link](tasks/TASK-20261031-retire-photo-link.md)：待验证；页脚、内容配置与 JSON-LD 已移除下线入口，局部 ESLint、构建、差异检查及旧域名检查通过；待本地页面验收，未提交推送。
+
+- TASK-20261031-retire-photo-link 追加微信入口移除：待验证；修改文件 ESLint、构建、差异检查通过，待页面验收；未提交推送，无阻塞。
+
+- 2026-10-31 TASK-20261031-retire-photo-link：已完成。用户页面验收通过并授权合并 main；局部 ESLint、构建、差异检查通过，无阻塞。提交与推送结果见 Git 历史，线上部署未核验。

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Mail } from 'lucide-react'
 import { notionLinks, siteMeta } from '../../content/homeContent'
 
-const Footer = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs') => void }) => {
+const Footer = ({ onOpenModal }: { onOpenModal: (type: 'gzh' | 'xhs') => void }) => {
   return (
     <footer className="section" style={{ backgroundColor: 'var(--muted)', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom">
@@ -78,9 +78,6 @@ const Footer = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs')
                 </a>
               </li>
               <li className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
-                微信: <button onClick={() => onOpenModal('wechat')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>silence52168</button>
-              </li>
-              <li className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
                 公众号: <button onClick={() => onOpenModal('gzh')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>Bin哥AI跃迁手记</button>
               </li>
               <li className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
@@ -99,9 +96,6 @@ const Footer = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs')
               我的站点
             </h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href={notionLinks.aiPhotoProject} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 写真创作站点</a>
-              </li>
               <li>
                 <a href={notionLinks.aiVisionProject} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'var(--muted-foreground)' }}>AI 光影创作站点</a>
               </li>

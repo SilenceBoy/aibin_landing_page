@@ -8,13 +8,13 @@ export const notionLinks = {
   aiMindset: 'https://ai-map.silencebin.com',
   promptCourse: '',
   xhsCourse: '',
-  aiPhotoProject: 'https://ai-photo.silencebin.com',
+  aiPhotoProject: '',
   aiVisionProject: 'https://ai-vision.silencebin.com',
   newsWeekly: 'https://news.silencebin.com',
   github: 'https://github.com/SilenceBoy',
   toolsAndWorkflow: '',
   contentPortfolio: 'https://ai-map.silencebin.com',
-  visualPortfolio: 'https://ai-photo.silencebin.com',
+  visualPortfolio: '',
   consulting: '',
   projectCooperation: '',
 }
@@ -332,12 +332,6 @@ export const contactConfig = {
   primaryButtonText: '预约 15 分钟沟通',
   primaryButtonLink: 'https://wj.qq.com/s2/25653939/5109/',
   channels: [
-    {
-      type: 'wechat',
-      label: '微信',
-      value: 'silence52168',
-      href: '',
-    },
     {
       type: 'email',
       label: '邮箱',

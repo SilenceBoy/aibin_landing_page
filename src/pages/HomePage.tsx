@@ -13,13 +13,12 @@ import Process from '../components/Process/Process'
 import ContactCTA from '../components/ContactCTA/ContactCTA'
 import Footer from '../components/Footer/Footer'
 import { useScrollObserver } from '../hooks/useScrollObserver'
-import wxImg from '../assets/wx.JPG'
 import wxgzhImg from '../assets/wxgzh.JPG'
 import xhsImg from '../assets/xhs.JPG'
 
 function HomePage() {
     useScrollObserver()
-    const [activeModal, setActiveModal] = useState<'wechat' | 'gzh' | 'xhs' | null>(null)
+    const [activeModal, setActiveModal] = useState<'gzh' | 'xhs' | null>(null)
 
     return (
         <div className="min-h-screen pt-16">
@@ -63,23 +62,15 @@ function HomePage() {
                             </button>
                             
                             <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--foreground)' }}>
-                                {activeModal === 'wechat' && '加微信联系我'}
                                 {activeModal === 'gzh' && '关注微信公众号'}
                                 {activeModal === 'xhs' && '关注我的小红书'}
                             </h3>
                             
-                            {activeModal === 'wechat' && (
-                                <p className="text-sm font-semibold mb-4 text-rose-500 animate-pulse">
-                                    添加微信请务必注明：你的行业和你的需求
-                                </p>
-                            )}
-                            
-                            {activeModal !== 'wechat' && <div className="h-4" />}
+                            <div className="h-4" />
                             
                             <div className="flex justify-center mb-2">
                                 <img 
                                     src={
-                                        activeModal === 'wechat' ? wxImg :
                                         activeModal === 'gzh' ? wxgzhImg :
                                         xhsImg
                                     } 

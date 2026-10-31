@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Mail } from 'lucide-react'
 import { siteMeta } from '../../content/homeContent'
 
-const ContactCTA = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'xhs') => void }) => {
+const ContactCTA = ({ onOpenModal }: { onOpenModal: (type: 'gzh' | 'xhs') => void }) => {
   return (
     <section className="section section-rule" id="contact" style={{ backgroundColor: 'var(--background)' }}>
       <div className="container-custom">
@@ -36,9 +36,6 @@ const ContactCTA = ({ onOpenModal }: { onOpenModal: (type: 'wechat' | 'gzh' | 'x
               <a href="mailto:silence52168@gmail.com" className="flex items-center gap-2 hover:underline" style={{ color: 'var(--foreground)' }}>
                 <Mail className="w-4 h-4" /> silence52168@gmail.com
               </a>
-              <span className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
-                微信: <button onClick={() => onOpenModal('wechat')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>silence52168</button>
-              </span>
               <span className="flex items-center gap-2" style={{ color: 'var(--muted-foreground)' }}>
                 公众号: <button onClick={() => onOpenModal('gzh')} className="hover:underline focus:outline-none transition-all" style={{ color: 'var(--foreground)' }}>Bin哥AI跃迁手记</button>
               </span>
